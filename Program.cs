@@ -55,10 +55,14 @@
         }
     }
 
+    static int dolgozokSzama(List <Dictionary<string,object>> dolgozok){
+        return dolgozok.Count();
+    }
+
     static void Main(){
 
         List <Dictionary<string,object>> Mechwart_dolgozoi= dolgozokBeolvasas();
         kiir(Mechwart_dolgozoi); 
-
+        Console.WriteLine("A dolgozók száma:", dolgozokSzama(Mechwart_dolgozoi));
     }
 }

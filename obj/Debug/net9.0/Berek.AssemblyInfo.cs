@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Berek")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+215e8356e5c36ea6fcde3e044460cdaaf1d8dfaa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66b6f6a20eab4d77b876e84cd4970eadbb3b7e86")]
 [assembly: System.Reflection.AssemblyProductAttribute("Berek")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Berek")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
