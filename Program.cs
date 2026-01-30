@@ -59,10 +59,28 @@
         return dolgozok.Count();
     }
 
+    static double atlagber(List <Dictionary<string,object>> dolgozok)
+    {
+        double osszeg = 0;
+
+        foreach (var dolgozo in dolgozok)
+        {
+            osszeg+=Convert.ToInt32(dolgozo["ber"]);
+
+        }
+
+        double atlag= osszeg/dolgozok.Count();
+        atlag = atlag/1000;
+        atlag = Math.Round(atlag,1);
+
+        return atlag;
+    }
+
     static void Main(){
 
         List <Dictionary<string,object>> Mechwart_dolgozoi= dolgozokBeolvasas();
         kiir(Mechwart_dolgozoi); 
-        Console.WriteLine("A dolgozók száma:", dolgozokSzama(Mechwart_dolgozoi));
+        Console.WriteLine($"A dolgozók száma: {dolgozokSzama(Mechwart_dolgozoi)}");
+        Console.WriteLine($"A dolgozók átlagbére: {atlagber(Mechwart_dolgozoi)}");
     }
 }
