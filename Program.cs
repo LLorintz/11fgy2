@@ -1,4 +1,5 @@
-﻿class Program{
+﻿using System.Text;
+class Program{
 
     static List <Dictionary<string,object>> dolgozokBeolvasas(){
 
@@ -76,11 +77,70 @@
         return atlag;
     }
 
-    static void Main(){
+    static void LegmagasabbFizetes(List <Dictionary<string,object>> dolgozok, string keresettReszleg)
+    {
+        Dictionary<string,object> legmagasabb = null;
+        int maxFizetes = -1;
 
+        foreach (var dolgozo in dolgozok)
+        {
+            if(dolgozo["reszleg"].Equals(keresettReszleg))
+            {
+                int aktualisfizetes= Convert.ToInt32(dolgozo["ber"]);
+
+                if (aktualisfizetes>maxFizetes)
+                {
+                    maxFizetes=aktualisfizetes;
+                    legmagasabb=dolgozo;
+                }
+            }
+        }
+
+        if(legmagasabb!=null)
+        {
+             Console.WriteLine(
+                $"Név: {legmagasabb["nev"]}, " +
+                $"Neme: {legmagasabb["neme"]}, " +
+                $"Részleg: {legmagasabb["reszleg"]}, " +
+                $"Belépés: {legmagasabb["belepes"]}, " +
+                $"Bér: {legmagasabb["ber"]}"
+            );
+        }
+    }
+
+    static void reszlegBeker(List <Dictionary<string,object>> dolgozok)
+    {
+        string bemenet = Console.ReadLine();
+
+        bool vanEIlyen=false;
+
+        foreach (var dolgozo in dolgozok)
+        {
+            if(dolgozo["reszleg"].Equals(bemenet))
+            {
+                vanEIlyen = true;
+                break;
+            }
+        }
+
+        if (vanEIlyen)
+        {
+            Console.WriteLine("van ilyen részleg");
+            LegmagasabbFizetes(dolgozok,bemenet);
+        }
+        else
+        {
+            Console.WriteLine("nincs ilyen");
+        }
+    }
+
+
+    static void Main(){
+        Console.InputEncoding = Encoding.Unicode;
         List <Dictionary<string,object>> Mechwart_dolgozoi= dolgozokBeolvasas();
         kiir(Mechwart_dolgozoi); 
         Console.WriteLine($"A dolgozók száma: {dolgozokSzama(Mechwart_dolgozoi)}");
         Console.WriteLine($"A dolgozók átlagbére: {atlagber(Mechwart_dolgozoi)}");
+        reszlegBeker(Mechwart_dolgozoi);
     }
 }
