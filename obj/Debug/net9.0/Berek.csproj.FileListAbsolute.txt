@@ -12,3 +12,4 @@ C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\refint\Berek.dll
 C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.pdb
 C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.genruntimeconfig.cache
 C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\ref\Berek.dll
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.sourcelink.json

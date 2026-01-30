@@ -3,23 +3,42 @@
     static List <Dictionary<string,object>> dolgozokBeolvasas(){
 
         List <Dictionary<string,object>> dolgozok = new List <Dictionary<string,object>>();
-
-        using(StreamReader sr = new StreamReader("berek2020.txt")){
+        try
+        {
+            using(StreamReader sr = new StreamReader("berek2020.txt")){
             sr.ReadLine();
 
             string sor;
             while((sor =sr.ReadLine()) != null){
-                string[] adatok = sor.Split(';');
-                var dolgozo= new Dictionary<string,object>();
-                dolgozo["nev"]=adatok[0];
-                dolgozo["neme"]=adatok[1];
-                dolgozo["reszleg"]=adatok[2];
-                dolgozo["belepes"]=adatok[3];
-                dolgozo["ber"]=adatok[4];
-
-                dolgozok.Add(dolgozo);
+                try
+                {
+                    string[] adatok = sor.Split(';');
+                    var dolgozo= new Dictionary<string,object>();
+                    dolgozo["nev"]=adatok[0];
+                    dolgozo["neme"]=adatok[1];
+                    dolgozo["reszleg"]=adatok[2];
+                    dolgozo["belepes"]=adatok[3];
+                    dolgozo["ber"]=int.Parse(adatok[4]);
+                    dolgozok.Add(dolgozo);
+                }
+                catch (Exception)
+                {
+                    //he egy sor hibás átugorjuk
+                    continue;
+                }
+               
             }
         }
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine("Hiba: A áfjl nem található");
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine("Hiba: a beolvasás során, " + ex.Message);
+        }
+      
         return dolgozok; 
     }
 
@@ -27,11 +46,11 @@
         foreach (var dolgozo in dolgozok)
         {
             Console.WriteLine(
-                $"Név: {dolgozo["nev"]}," +
-                $"Neme: {dolgozo["neme"]}," +
-                $"Részleg: {dolgozo["reszleg"]}," +
-                $"Belépés: {dolgozo["belepes"]}," +
-                $"Bér: {dolgozo["nev"]},"
+                $"Név: {dolgozo["nev"]}, " +
+                $"Neme: {dolgozo["neme"]}, " +
+                $"Részleg: {dolgozo["reszleg"]}, " +
+                $"Belépés: {dolgozo["belepes"]}, " +
+                $"Bér: {dolgozo["ber"]}"
             );
         }
     }
