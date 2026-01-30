@@ -1,0 +1,14 @@
+C:\Users\lorintz.levente\Documents\Berek\bin\Debug\net9.0\Berek.exe
+C:\Users\lorintz.levente\Documents\Berek\bin\Debug\net9.0\Berek.deps.json
+C:\Users\lorintz.levente\Documents\Berek\bin\Debug\net9.0\Berek.runtimeconfig.json
+C:\Users\lorintz.levente\Documents\Berek\bin\Debug\net9.0\Berek.dll
+C:\Users\lorintz.levente\Documents\Berek\bin\Debug\net9.0\Berek.pdb
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.AssemblyInfoInputs.cache
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.AssemblyInfo.cs
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.csproj.CoreCompileInputs.cache
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.dll
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\refint\Berek.dll
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.pdb
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\Berek.genruntimeconfig.cache
+C:\Users\lorintz.levente\Documents\Berek\obj\Debug\net9.0\ref\Berek.dll
